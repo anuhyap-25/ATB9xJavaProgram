@@ -7,19 +7,22 @@ public class Task1_Grade {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the score");
         int score = sc.nextInt();
+        char grade = 0;
         if(score >= 90 && score<=100)
         {
-            System.out.println("Grade is A");
+            grade = 'A';
         } else if (score<= 89 && score>=80) {
-            System.out.println("Grade is B");
+            grade = 'B';
         } else if (score<= 79 && score>=70) {
-            System.out.println("Grade is C");
+            grade = 'C';
         } else if (score<=69 && score>=60) {
-            System.out.println("Grade is D");
+            grade = 'D';
+        } else if (score<=0 || score>100) {
+            System.out.println("Enter valid number");
+        } else {
+            grade = 'F';
         }
-        else {
-            System.out.println("Grade is F");
-        }
+        System.out.printf("Your grade is %s", grade);
         sc.close();
     }
 }
