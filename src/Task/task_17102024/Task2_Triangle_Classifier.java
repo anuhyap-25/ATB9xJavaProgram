@@ -6,12 +6,15 @@ public class Task2_Triangle_Classifier {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value of side1: ");
-        int s1 = sc.nextInt();
+        double s1 = sc.nextDouble();
         System.out.println("Enter the value of side2: ");
-        int s2 = sc.nextInt();
+        double s2 = sc.nextDouble();
         System.out.println("Enter the value of side3: ");
-        int s3 = sc.nextInt();
-        if(s1==s2 && s1==s3)
+        double s3 = sc.nextDouble();
+        if(s1<=0 || s2<=0 || s3<=0)
+        {
+            System.out.println("Invalid input: Input should be a positive number");
+        } else if (s1==s2 && s1==s3 && s2==s3)
         {
             System.out.println("Equilateral Triangle");
         }
